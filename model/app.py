@@ -1,6 +1,8 @@
 import streamlit as st
 import requests
 import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
 
 # Streamlit app title
 st.title('AlphaVantage Data')
@@ -40,6 +42,26 @@ if st.button('Submit'):
 
         # Create a DataFrame from the extracted entries
         df = pd.DataFrame(extracted_entries)
+
+        # Convert 'Date' column to datetime
+        df['Date'] = pd.to_datetime(df['Date'])
+
+        # Plotting
+        plt.figure(figsize=(10, 6))
+        st.set_option('deprecation.showPyplotGlobalUse', False)
+        plt.plot(df['Date'], df['Close'], marker='o', linestyle='-')
+        plt.title('Closing Prices Over Time')
+        plt.xlabel('Date')
+        plt.ylabel('Closing Price')
+        plt.grid(True)
+        plt.xticks(rotation=45)
+
+        # Set y-axis ticks at 20%, 40%, 60%, 80%, and 100% of the y-axis range
+        y_min, y_max = plt.gca().get_ylim()
+        y_ticks = [y_min + (y_max - y_min) * pct for pct in [0.2, 0.4, 0.6, 0.8, 1.0]]
+        plt.gca().set_yticks(y_ticks)
+
+        st.pyplot()
 
         # Display the DataFrame
         st.write(df)
