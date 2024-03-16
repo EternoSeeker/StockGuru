@@ -44,7 +44,7 @@ if prompt := st.chat_input("You:"):
     elif "company" not in st.session_state:
         st.session_state.messages.append({
             "role": "user", 
-            "content": f"{prompt} is my specific company preference, now ask me some more questions related to my preferences."}
+            "content": f"{prompt} is my specific company preference, now ask me some more questions related to my preferences, and then suggest me stock to invest in."}
         )
         st.session_state["company"] = prompt
     # Generate the bot's response
