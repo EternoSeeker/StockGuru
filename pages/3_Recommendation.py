@@ -38,7 +38,7 @@ if prompt := st.chat_input("You:"):
         st.markdown(prompt)
 
     # Second message from the bot asking about the risk factor
-    if len(st.session_state.messages) == 1:
+    if len(st.session_state.messages) == 2:
         st.session_state.messages.append(
             {
                 "role": "assistant",
@@ -50,7 +50,7 @@ if prompt := st.chat_input("You:"):
                 "Great! Now, could you please specify the risk factor you are considering - high, medium, or low?"
             )
     # Third message from the bot asking about a specific company
-    elif len(st.session_state.messages) == 2:
+    elif len(st.session_state.messages) == 4:
         st.session_state.messages.append(
             {
                 "role": "assistant",
