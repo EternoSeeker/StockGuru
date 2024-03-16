@@ -16,9 +16,7 @@ if len(st.session_state.messages) == 0:
     st.session_state.messages.append(
         {
             "role": "assistant",
-            "content": """Welcome to our cutting-edge Conversational Recommender System for stock investments!Our goal is to provide you with personalized recommendations and real-time insights.
-                        To better assist you, could you please share the domain of companies you are interested in ?
-                        Example: Technology, Healthcare""",
+            "content": """Welcome to our cutting-edge Conversational Recommender System for stock investments! Our goal is to provide you with personalized recommendations and real-time insights. To better assist you, could you please share the domain of companies you are interested in? Example: Technology, Healthcare""",
         }
     )
 
@@ -26,32 +24,39 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
+tempString = ""
+
 if prompt := st.chat_input("You:"):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
-
-    st.session_state.messages.append(
-            {
-                "role": "assistant",
-                "content": "Great! Now, could you please specify the risk factor you are considering - high, medium, or low?",
-            }
-    )
     
+    tempString = prompt
 
-
-    if len(st.session_state.messages) == 4:
-        #Ask about a specific company
+    if "domain" not in st.session_state:
+        st.session_state["domain"] = tempString
         st.session_state.messages.append(
             {
                 "role": "assistant",
-                "content": "Sure! Lastly, could you please provide the name of the specific company you are interested in?",
+                "content": f"{tempString} is the user's domain preference. Now, please specify the risk factor you are considering - high, medium, or low?",
             }
         )
-        with st.chat_message("assistant"):
-            st.markdown(
-                "Sure! Lastly, could you please provide the name of the specific company you are interested in?"
-            )
+    elif "risk_factor" not in st.session_state:
+        st.session_state["risk_factor"] = tempString
+        st.session_state.messages.append(
+            {
+                "role": "assistant",
+                "content": f"{tempString} is the user's risk factor preference. Are you interested in any particular company?",
+            }
+        )
+    else:
+        # Assuming user is specifying a particular company
+        st.session_state.messages.append(
+            {
+                "role": "assistant",
+                "content": f"{tempString} is the user's company preference.",
+            }
+        )
 
     # Generate the bot's response
     with st.chat_message("assistant"):
