@@ -27,10 +27,19 @@ def set_background(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
 set_background('./data/images/background.jpg')
-st.title("Stock Guru")
-st.subheader("Your personalized stock recommendation system.")
-st.write(
-    """Whether you're a seasoned investor or just starting out, 
-         Our goal is to provide you with personalized recommendations and real-time insights to help you navigate the complex world of financial markets. 
-         Let's embark on this journey together, empowering you to make informed investment decisions tailored to your unique financial goals and risk profile."""
-)
+
+original_title = '<h1 style="font-family: sans-serif; color:white; font-size: 5rem;"> Stock-Guru 📈 </h1>'
+st.markdown(original_title, unsafe_allow_html=True)
+
+subheader1 = '<h2 style="font-family: sans-serif; color:white; font-size: 1.8rem;"> Your personalized stock recommendation system. </h2>'
+st.markdown(subheader1, unsafe_allow_html=True)
+
+description = '<h3 style="font-family: sans-serif; color:white; font-size: 1.1rem; font-weight: light;"> Whether you\'re a seasoned investor or just starting out, Our goal is to provide you with personalized recommendations and real-time insights to help you navigate the complex world of financial markets. Let\'s embark on this journey together, empowering you to make informed investment decisions tailored to your unique financial goals and risk profile. </h3>'
+st.markdown(description, unsafe_allow_html=True)
+
+# st.subheader("Your personalized stock recommendation system.")
+# st.write(
+#     """Whether you're a seasoned investor or just starting out, 
+#          Our goal is to provide you with personalized recommendations and real-time insights to help you navigate the complex world of financial markets. 
+#          Let's embark on this journey together, empowering you to make informed investment decisions tailored to your unique financial goals and risk profile."""
+# )
