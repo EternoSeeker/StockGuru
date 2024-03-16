@@ -32,7 +32,7 @@ def main():
                 outline: none;
                 list-style: none;
                 color: #ffffff;
-                background-color: #4CAF50; /* Green color */
+                background-color: #023a5a; /* Green color */
                 border-radius: 10px;
                 transition: background-color 0.3s;
                 position: relative;
