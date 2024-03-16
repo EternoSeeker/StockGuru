@@ -31,20 +31,16 @@ if prompt := st.chat_input("You:"):
     with st.chat_message("user"):
         st.markdown(prompt)
 
-    # Logic to determine the next bot message based on the conversation flow
-    if len(st.session_state.messages) == 2:
-        #Ask about the risk factor
-        st.session_state.messages.append(
+    st.session_state.messages.append(
             {
                 "role": "assistant",
                 "content": "Great! Now, could you please specify the risk factor you are considering - high, medium, or low?",
             }
-        )
-        # with st.chat_message("assistant"):
-        #     st.markdown(
-        #         "Great! Now, could you please specify the risk factor you are considering - high, medium, or low?"
-        #     )
-    elif len(st.session_state.messages) == 4:
+    )
+    
+
+
+    if len(st.session_state.messages) == 4:
         #Ask about a specific company
         st.session_state.messages.append(
             {
@@ -52,10 +48,10 @@ if prompt := st.chat_input("You:"):
                 "content": "Sure! Lastly, could you please provide the name of the specific company you are interested in?",
             }
         )
-        # with st.chat_message("assistant"):
-        #     st.markdown(
-        #         "Sure! Lastly, could you please provide the name of the specific company you are interested in?"
-        #     )
+        with st.chat_message("assistant"):
+            st.markdown(
+                "Sure! Lastly, could you please provide the name of the specific company you are interested in?"
+            )
 
     # Generate the bot's response
     with st.chat_message("assistant"):
