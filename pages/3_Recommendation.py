@@ -25,7 +25,6 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 tempString = ""
-
 if prompt := st.chat_input("You:"):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
@@ -38,7 +37,7 @@ if prompt := st.chat_input("You:"):
         st.session_state.messages.append(
             {
                 "role": "assistant",
-                "content": f"{tempString} is the user's domain preference. Now, please specify the risk factor you are considering - high, medium, or low?",
+                "content": f"Thank you for sharing your interest in the {tempString} domain. Now, please specify the risk factor you are considering - high, medium, or low?",
             }
         )
     elif "risk_factor" not in st.session_state:
@@ -46,7 +45,7 @@ if prompt := st.chat_input("You:"):
         st.session_state.messages.append(
             {
                 "role": "assistant",
-                "content": f"{tempString} is the user's risk factor preference. Are you interested in any particular company?",
+                "content": f"Got it, your risk factor preference is {tempString}. Are you interested in any particular company within the {st.session_state['domain']} domain?",
             }
         )
     else:
@@ -54,7 +53,7 @@ if prompt := st.chat_input("You:"):
         st.session_state.messages.append(
             {
                 "role": "assistant",
-                "content": f"{tempString} is the user's company preference.",
+                "content": f"Based on your preferences for the {st.session_state['domain']} domain and {st.session_state['risk_factor']} risk factor, I will provide insights and recommendations for {tempString}.",
             }
         )
 
