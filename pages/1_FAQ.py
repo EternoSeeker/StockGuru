@@ -12,8 +12,8 @@ def faq_accordion(question, answer):
     )
 
 def main():
-    st.title("Stock Trading FAQ Page")
-
+    st.title("Stock Trading")
+    st.subheader("Frequently Asked Questions")
     # Custom CSS for accordions
     st.markdown(
         """
