@@ -21,12 +21,6 @@ if len(st.session_state.messages) == 0:
                         Example: Technology, Healthcare""",
         }
     )
-    # with st.chat_message("assistant"):
-    #     st.markdown(
-    #         """Welcome to our cutting-edge Conversational Recommender System for stock investments!Our goal is to provide you with personalized recommendations and real-time insights.
-    #             To better assist you, could you please share the domain of companies you are interested in ?
-    #             Example: Technology, Healthcare"""
-    #     )
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
@@ -40,20 +34,28 @@ if prompt := st.chat_input("You:"):
     # Logic to determine the next bot message based on the conversation flow
     if len(st.session_state.messages) == 2:
         # Ask about the risk factor
-        st.session_state.messages.append(
-            {
-                "role": "assistant",
-                "content": "Great! Now, could you please specify the risk factor you are considering - high, medium, or low?",
-            }
-        )
+        # st.session_state.messages.append(
+        #     {
+        #         "role": "assistant",
+        #         "content": "Great! Now, could you please specify the risk factor you are considering - high, medium, or low?",
+        #     }
+        # )
+        with st.chat_message("assistant"):
+            st.markdown(
+                "Great! Now, could you please specify the risk factor you are considering - high, medium, or low?"
+            )
     elif len(st.session_state.messages) == 4:
         # Ask about a specific company
-        st.session_state.messages.append(
-            {
-                "role": "assistant",
-                "content": "Sure! Lastly, could you please provide the name of the specific company you are interested in?",
-            }
-        )
+        # st.session_state.messages.append(
+        #     {
+        #         "role": "assistant",
+        #         "content": "Sure! Lastly, could you please provide the name of the specific company you are interested in?",
+        #     }
+        # )
+        with st.chat_message("assistant"):
+            st.markdown(
+                "Sure! Lastly, could you please provide the name of the specific company you are interested in?"
+            )
 
     # Generate the bot's response
     with st.chat_message("assistant"):
