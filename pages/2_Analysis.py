@@ -5,10 +5,10 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 
 # Streamlit app title
-st.title('AlphaVantage Data')
+st.title('Stock Performance Analysis')
 
 # Symbol input form
-symbol_input = st.text_input('Enter Symbol:')
+symbol_input = st.text_input('Enter Symbol:', key='symbol_input',placeholder='e.g AAPL')
 
 # Submit button
 if st.button('Submit'):
