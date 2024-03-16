@@ -26,37 +26,27 @@ for message in st.session_state.messages:
 
 tempString = ""
 if prompt := st.chat_input("You:"):
-    st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
     
-    tempString = prompt
-
     if "domain" not in st.session_state:
-        st.session_state["domain"] = tempString
-        st.session_state.messages.append(
-            {
-                "role": "assistant",
-                "content": f"Thank you for sharing your interest in the {tempString} domain. Now, please specify the risk factor you are considering - high, medium, or low?",
-            }
+        st.session_state.messages.append({
+            "role": "user", 
+            "content": f"{prompt} is my domain preference, now ask me about my risk factor preference- high, medium, or low?"}
         )
+        st.session_state["domain"] = prompt
     elif "risk_factor" not in st.session_state:
-        st.session_state["risk_factor"] = tempString
-        st.session_state.messages.append(
-            {
-                "role": "assistant",
-                "content": f"Got it, your risk factor preference is {tempString}. Are you interested in any particular company within the {st.session_state['domain']} domain?",
-            }
+        st.session_state.messages.append({
+            "role": "user", 
+            "content": f"{prompt} is my risk, now ask me about my specific Company preference."}
         )
-    else:
-        # Assuming user is specifying a particular company
-        st.session_state.messages.append(
-            {
-                "role": "assistant",
-                "content": f"Based on your preferences for the {st.session_state['domain']} domain and {st.session_state['risk_factor']} risk factor, I will provide insights and recommendations for {tempString}.",
-            }
+        st.session_state["risk_factor"] = prompt
+    elif "company" not in st.session_state:
+        st.session_state.messages.append({
+            "role": "user", 
+            "content": f"{prompt} is my specific company preference, now ask me some more questions related to my preferences."}
         )
-
+        st.session_state["company"] = prompt
     # Generate the bot's response
     with st.chat_message("assistant"):
         stream = client.chat.completions.create(
@@ -71,3 +61,5 @@ if prompt := st.chat_input("You:"):
         # Ensure the response is not already in the messages list
         if response not in [m["content"] for m in st.session_state.messages]:
             st.session_state.messages.append({"role": "assistant", "content": response})
+    
+
