@@ -21,12 +21,12 @@ if len(st.session_state.messages) == 0:
                         Example: Technology, Healthcare""",
         }
     )
-    with st.chat_message("assistant"):
-        st.markdown(
-            """Welcome to our cutting-edge Conversational Recommender System for stock investments!Our goal is to provide you with personalized recommendations and real-time insights.
-                To better assist you, could you please share the domain of companies you are interested in ?
-                Example: Technology, Healthcare"""
-        )
+    # with st.chat_message("assistant"):
+    #     st.markdown(
+    #         """Welcome to our cutting-edge Conversational Recommender System for stock investments!Our goal is to provide you with personalized recommendations and real-time insights.
+    #             To better assist you, could you please share the domain of companies you are interested in ?
+    #             Example: Technology, Healthcare"""
+    #     )
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
