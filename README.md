@@ -14,6 +14,10 @@ Join us on this collaborative journey where we strive to arm you with the necess
 
 ## Getting Started
 
+<div>
+  <img src="data/images/Home.png" height="400">
+</div>
+
 1. Welcome to Stock-Guru's home page, your gateway to personalized stock recommendations. Here, we introduce you to our mission, which is to provide tailored suggestions and real-time updates to help you make informed investment decisions aligned with your financial goals and risk tolerance.
 2. Let our chatbot assist you in finding the perfect stock recommendations tailored to your preferences.
    - Let us know the domain you're interested in.
@@ -21,6 +25,13 @@ Join us on this collaborative journey where we strive to arm you with the necess
    - Tell if you have specific set of companies that you have in mind.
    - Let us know about your preference regarding term of the investment.
    - Now the model will suggest you some stocks based on your preferences.
+
+<div>
+  <img src="data/images/chatbot1.png" width="550">
+  <img src="data/images/chatbot2.png" width="550">
+</div>
+
+
 4. Got questions about stocks or the market? Find answers to frequently asked questions here to deepen your understanding.
 5. Ready to dive into the numbers? Let us provide you with recent statistics and visualizations.
    - Enter a stock symbol to retrieve recent statistics and insights.
@@ -33,9 +44,17 @@ Join us on this collaborative journey where we strive to arm you with the necess
 
 - Got questions about stocks or the market? Find answers to frequently asked questions here to deepen your understanding.
 
+<div>
+  <img src="data/images/FAQ.png" height="350">
+</div>
+
 ### 📊 Analysis
 
 - Visualize recent data trends based on stock symbols through plotted graphs for better understanding.
+
+<div>
+  <img src="data/images/Analysis.png" height="350">
+</div>
 
 #### Example
 
@@ -60,13 +79,22 @@ Join us on this collaborative journey where we strive to arm you with the necess
 
 - Display current trends and news about stocks to keep you informed and ahead of the curve.
 
+<div>
+  <img src="data/images/Market.png" height="350">
+</div>
+
 ### 💡 Recommendation
 
 - Utilize our chatbot to receive stock recommendations based on your preferences.
 - Provide preferences such as domain, risk factor, specific company interest, and term of investment to receive tailored recommendations.
 
 ### 📚 Know more
+
 - Access a curated collection of resources and articles for further information and insights.
+
+<div>
+  <img src="data/images/Guide.png" height="350">
+</div>
 
 ## Resources
 
