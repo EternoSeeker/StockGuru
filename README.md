@@ -18,6 +18,23 @@ Join us on this collaborative journey where we strive to arm you with the necess
 
 ## Getting Started
 
+### Running Locally
+
+To run the Streamlit app locally, follow these steps:
+
+- **Install Streamlit from terminal/command line**:
+
+```py
+pip install streamlit
+```
+
+- **Run this command from the directory of project**:
+
+```py
+streamlit run Home.py
+```
+
+### Home Page
 <div>
   <img src="data/images/Home.png" height="400">
 </div>
