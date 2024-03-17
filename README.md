@@ -159,4 +159,5 @@ streamlit run Home.py
 **Feedparser**: For RSS feed parsing, to aggregate and display current trends and news about the stock market.
 
 ## License
+
 GPL-3.0 license
