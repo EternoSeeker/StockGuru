@@ -88,6 +88,10 @@ Join us on this collaborative journey where we strive to arm you with the necess
 - Utilize our chatbot to receive stock recommendations based on your preferences.
 - Provide preferences such as domain, risk factor, specific company interest, and term of investment to receive tailored recommendations.
 
+<div>
+  <img src="data/images/Chatbot-initial.png" height="350">
+</div>
+
 ### 📚 Know more
 
 - Access a curated collection of resources and articles for further information and insights.
