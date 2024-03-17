@@ -1,6 +1,10 @@
 import streamlit as st
 import base64
 
+st.set_page_config(
+    page_title="Stock-Guru",
+)
+
 st.markdown(
     """
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
