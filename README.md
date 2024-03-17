@@ -8,8 +8,18 @@ By leveraging technologies such as Matplotlib, SciPy, Scikit-learn, Pandas, and 
 Join us on this collaborative journey where we strive to arm you with the necessary knowledge and tools to make informed decisions that align perfectly with your financial goals and risk profile.
 
 ## The Solution
+
 ## Getting Started
-## Stock
+
+## Stocks
+
+<div>
+  <img src="data/images/stock-gif-min.gif" height="200">
+</div>
+
 ## Resources
+
 ## Acknowledgements
+
 ## License
+GPL-3.0 license
