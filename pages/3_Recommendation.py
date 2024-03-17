@@ -25,7 +25,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 tempString = ""
-if prompt := st.chat_input("Message ChatGuru..."):
+if prompt := st.chat_input("Message StockGuru..."):
     with st.chat_message("user"):
         st.markdown(prompt)
 
