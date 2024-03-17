@@ -28,7 +28,12 @@ To run the Streamlit app locally, follow these steps:
 pip install streamlit
 ```
 
-- **Run this command from the directory of project**:
+- **Clone the repository**:
+```
+git clone https://github.com/EternoSeeker/Alphabyte.git
+```
+
+- **Run this command within the directory of project**:
 
 ```py
 streamlit run Home.py
