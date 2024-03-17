@@ -32,5 +32,4 @@ def show_guides():
     st.write("📊 MarketWatch: A financial information website providing real-time market data and analysis.")
     st.link_button("Visit MarketWatch", url="https://www.marketwatch.com/")
 
-if __name__ == "__main__":
-    show_guides()
+show_guides()

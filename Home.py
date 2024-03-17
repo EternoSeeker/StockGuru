@@ -1,6 +1,5 @@
+import streamlit as st
 import base64
-import streamlit as st
-import streamlit as st
 
 def get_base64(bin_file):
     with open(bin_file, 'rb') as f:
