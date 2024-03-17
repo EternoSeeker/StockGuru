@@ -60,7 +60,7 @@ Join us on this collaborative journey where we strive to arm you with the necess
 
 **Company**: Apple
 
-**Symbol**: APPL
+**Symbol**: AAPL
 
 |   Date   |   Open   |   High   |    Low    |  Close  |
 |:---------:|:--------:|:--------:|:---------:|:-------:|
@@ -102,9 +102,9 @@ Join us on this collaborative journey where we strive to arm you with the necess
 
 ## Resources
 
-- 🔎 [Seeking Alpha](https://seekingalpha.com/): A platform for stock market insights, analysis, and recommendations.
-- 💰 [Value Investing](https://valueinvesting.io/): Dedicated to value investing principles and strategies.
-- 💸 [MoneyControl](https://www.moneycontrol.com/): Leading financial platform in India for real-time stock quotes and market news.
+- 🔎 [Seeking Alpha](https://seekingalpha.com/)
+- 💰 [Value Investing](https://valueinvesting.io/)
+- 💸 [MoneyControl](https://www.moneycontrol.com/)
 - 💼 [Investopedia](https://www.investopedia.com/)
 - 🃏 [The Motley Fool](https://www.fool.com/)
 - 💹 [Yahoo! Finance](https://finance.yahoo.com/)
