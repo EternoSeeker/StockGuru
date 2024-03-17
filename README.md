@@ -14,13 +14,59 @@ Join us on this collaborative journey where we strive to arm you with the necess
 
 ## Getting Started
 
+1. Welcome to Stock-Guru's home page, your gateway to personalized stock recommendations. Here, we introduce you to our mission, which is to provide tailored suggestions and real-time updates to help you make informed investment decisions aligned with your financial goals and risk tolerance.
+2. Let our chatbot assist you in finding the perfect stock recommendations tailored to your preferences.
+   - Let us know the domain you're interested in.
+   - What is your risk factor?
+   - Tell if you have specific set of companies that you have in mind.
+   - Let us know about your preference regarding term of the investment.
+   - Now the model will suggest you some stocks based on your preferences.
+4. Got questions about stocks or the market? Find answers to frequently asked questions here to deepen your understanding.
+5. Ready to dive into the numbers? Let us provide you with recent statistics and visualizations.
+   - Enter a stock symbol to retrieve recent statistics and insights.
+   - Visualize recent data trends through plotted graphs for better understanding.
+6. Stay updated with current trends and news about the stock market to make timely decisions.
+
 ## The Solution
 
-### Home
-### Frequently Asked Questions
-### Analysis
-### Recommendation
-### Guide
+### 🤔 Frequently Asked Questions
+
+- Got questions about stocks or the market? Find answers to frequently asked questions here to deepen your understanding.
+
+### 📊 Analysis
+
+- Visualize recent data trends based on stock symbols through plotted graphs for better understanding.
+
+#### Example
+
+**Company**: Apple
+
+**Symbol**: APPL
+
+|   Date   |   Open   |   High   |    Low    |  Close  |
+|:---------:|:--------:|:--------:|:---------:|:-------:|
+| 2024-03-15 | 171.1700 | 172.6200 | 170.2850 | 172.62 |
+| 2024-03-14 | 172.9100 | 174.3078 | 172.0500 |   173   |
+| 2024-03-13 | 172.7700 | 173.1850 | 170.7600 | 171.13 |
+| 2024-03-12 | 173.1500 | 174.0300 | 171.0100 | 173.23 |
+| 2024-03-11 | 172.9400 | 174.3800 | 172.0500 | 172.75 |
+| 2024-03-08 | 169.0000 | 173.7000 | 168.9400 | 170.73 |
+| 2024-03-07 | 169.1500 | 170.7300 | 168.4900 |   169   |
+| 2024-03-06 | 171.0600 | 171.2400 | 168.6800 | 169.12 |
+| 2024-03-05 | 170.7600 | 172.0400 | 169.6200 | 170.12 |
+| 2024-03-04 | 176.1500 | 176.9000 | 173.7900 | 175.1  |
+
+### 📈 Market
+
+- Display current trends and news about stocks to keep you informed and ahead of the curve.
+
+### 💡 Recommendation
+
+- Utilize our chatbot to receive stock recommendations based on your preferences.
+- Provide preferences such as domain, risk factor, specific company interest, and term of investment to receive tailored recommendations.
+
+### 📚 Know more
+- Access a curated collection of resources and articles for further information and insights.
 
 ## Resources
 
