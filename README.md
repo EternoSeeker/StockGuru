@@ -1,3 +1,7 @@
+<div>
+  <img src="data/images/logo.png" height="180">
+</div>
+
 # Stock-Guru
 
 ### A Personalized stock recommendation system.
