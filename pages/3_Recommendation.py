@@ -41,8 +41,10 @@ if prompt := st.chat_input("Message StockGuru..."):
         user_message["content"] = f"{prompt} is my risk, now ask me about my specific Company preference."
         st.session_state["risk_factor"] = prompt
     elif "company" not in st.session_state:
-        user_message["content"] = f"I would likely consider {prompt} as my company preference, you can ask me some more questions related to my preferences, and then suggest me stock to invest in."
+        user_message["content"] = f"I would likely consider {prompt} as my company preferences, you can ask me some more questions related to my preferences, and then suggest me stock to invest in."
         st.session_state["company"] = prompt
+    elif "next-answer" not in st.session_state:
+        user_message["content"] = f"{prompt}, these were my preferences, suggest me a good stock. Also In subsequent prompts, Only answer my questions which would related to stock, market, finance and investments, not of other topics. Thank you."
 
     # Add the user's message to the list
     st.session_state.messages.append(user_message)

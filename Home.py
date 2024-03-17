@@ -27,13 +27,12 @@ def set_background(png_file):
 
 set_background('./data/images/background.jpg')
 
-original_title = '<h1 style="font-family: sans-serif; color:white; font-size: 5rem;"> Stock-Guru 📈 </h1>'
-st.markdown(original_title, unsafe_allow_html=True)
+st.image("./data/images/logo.png", width=600)
 
-subheader1 = '<h2 style="font-family: sans-serif; color:white; font-size: 1.8rem;"> Your personalized stock recommendation system. </h2>'
+subheader1 = '<h2 style="font-family: sans-serif; color:white; font-size: 2rem;"> Your personalized stock recommendation system. </h2>'
 st.markdown(subheader1, unsafe_allow_html=True)
 
-description = '<h3 style="font-family: sans-serif; color:white; font-size: 1rem; font-weight: extra-thin;"> Whether you\'re a seasoned investor or just starting out, Our goal is to provide you with personalized recommendations and real-time insights to help you navigate the complex world of financial markets. Let\'s embark on this journey together, empowering you to make informed investment decisions tailored to your unique financial goals and risk profile. </h3>'
+description = '<h3 style="font-family: sans-serif; color:white; font-size: 1.2rem; font-weight: extra-thin;"> Whether you\'re a seasoned investor or just starting out, Our goal is to provide you with personalized recommendations and real-time insights to help you navigate the complex world of financial markets. Let\'s embark on this journey together, empowering you to make informed investment decisions tailored to your unique financial goals and risk profile. </h3>'
 st.markdown(description, unsafe_allow_html=True)
 
 # st.subheader("Your personalized stock recommendation system.")
