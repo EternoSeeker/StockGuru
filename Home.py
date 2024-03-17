@@ -77,7 +77,7 @@ footer = """
           </div>
           <div style="display:flex;flex-direction:column;justify-content:center;">
             <div>Contact:</div>
-            <div>Email: your@email.com</div>
+            <div>Email: <a href="mailto:shriharimagar1@gmail.com">shriharimagar1@gmail.com</a></div>
           </div>
         </div>
         """
