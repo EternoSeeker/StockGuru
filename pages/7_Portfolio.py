@@ -28,9 +28,9 @@ user_details_container = st.container()
 col1, col2 = st.columns(2)
 
 with col1:
-   preffered_sectors_option = st.multiselect(
+    preferred_sectors_option = st.multiselect(
     'Select domains to invest in:',
-    ['Technology', 'Healthcare'])
+    ['Technology', 'Healthcare', 'Finance', 'Energy', 'Consumer Goods', 'Retail', 'Automotive', 'Telecommunications', 'Entertainment', 'Aerospace and Defense'])
 
 with col2:
    risk_tolerance_option = st.selectbox(
