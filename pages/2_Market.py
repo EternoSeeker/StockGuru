@@ -49,8 +49,7 @@ if news_data:
         
         # Perform sentiment analysis
         sentiment = analyze_sentiment(news_item['description'])
-        st.write(f"Sentiment: {sentiment}")
-        
+        st.markdown(f"<span style='color:white; font-size:2rem;'>Sentiment: {sentiment}</span>", unsafe_allow_html=True)
         st.write("---")
 else:
     st.write("No news data available.")
