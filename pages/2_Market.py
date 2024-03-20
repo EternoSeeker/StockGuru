@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 from textblob import TextBlob
 
-st.title("Stock Guru Chatbot")
+st.title("Market News")
 
 # Function to fetch news data from the API
 def fetch_news(symbols):
