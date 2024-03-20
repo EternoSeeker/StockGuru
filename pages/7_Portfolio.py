@@ -47,7 +47,7 @@ with col3:
 
 with col4:
     current_investments = st.multiselect(
-    'Select your current investments',
+    'Select your current investments in US stocks (NASDAQ, NYSE):',
     symbols_df.tolist())
 
 
@@ -68,7 +68,7 @@ if st.button("Save Preferences"):
     chart_data = pd.DataFrame()  # Initialize an empty DataFrame
 
     for symbol_input in current_user_stocks:
-        url = f'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol_input}&apikey=5EJNPQV0T263M9MG'
+        url = f'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol_input}&apikey=DNT3T50QF2PQ4ZDZ'
         response = requests.get(url)
 
         if response.status_code == 200:
