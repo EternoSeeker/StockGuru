@@ -1,6 +1,6 @@
 import streamlit as st
 import base64
-
+st.session_state["isUserLoggedIn"] = False
 st.set_page_config(
     page_title="Stock-Guru",
 )
