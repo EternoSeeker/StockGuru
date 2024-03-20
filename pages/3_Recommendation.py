@@ -41,11 +41,13 @@ if prompt := st.chat_input("Message StockGuru..."):
         user_message["content"] = f"{prompt} is my risk, now ask me about my investment term- short, medium, or long?"
         st.session_state["risk_factor"] = prompt
     elif "investment-term" not in st.session_state:
-        user_message["content"] = f"{prompt} is my investment term, now ask me one more question related to my preferences."
+        user_message["content"] = f"{prompt} is my investment term, now ask me one more final question related to my preferences."
+        st.session_state["investment-term"] = prompt
     elif "next-answer" not in st.session_state:
         if ["userDetails"] in st.session_state:
             current_user_stocks = st.session_state["userDetails"]["preferences"]["CurrentStocks"]
-        user_message["content"] = f"{prompt} - these were my preferences, {current_user_stocks} are my current stock holdings in NASDAQ and NYSE. Suggest me a some good stock that might perform well from other domains for diversification. Also In subsequent prompts, Only answer my questions which would related to stock, market, finance and investments, not of other topics. Thank you."
+        st.session_state["next-answer"] = prompt
+        user_message["content"] = f"{prompt} - These were my preferences, {current_user_stocks} are my current stock holdings in NASDAQ and NYSE. Suggest me a some good stock that might perform well from other domains for diversification. Also in subsequent prompts, Only answer my questions related to stocks and market."
 
     # Add the user's message to the list
     st.session_state.messages.append(user_message)
