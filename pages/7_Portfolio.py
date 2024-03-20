@@ -63,8 +63,6 @@ if st.button("Save Preferences"):
     }
     st.session_state["userDetails"] = user_details
     current_user_stocks = st.session_state["userDetails"]["preferences"]["CurrentStocks"]
-    st.write(current_user_stocks)
-    st.write(type(current_user_stocks))
 
     # Draw the multi-line chart
     chart_data = pd.DataFrame()  # Initialize an empty DataFrame
