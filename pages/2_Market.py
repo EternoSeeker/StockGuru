@@ -33,7 +33,7 @@ def analyze_sentiment(text):
         return "Neutral"
 
 # Get symbols from user input
-symbols = st.text_input("Enter symbols (comma-separated):", value="AAPL,IBM")
+symbols = st.text_input("Enter symbols (comma-separated):", value="AAPL")
 
 # Fetch news data based on user input symbols
 news_data = fetch_news(symbols)
@@ -41,9 +41,10 @@ news_data = fetch_news(symbols)
 # Display news data and sentiment analysis in the Streamlit app
 if news_data:
     for news_item in news_data:
-        st.write(f"Title: {news_item['title']}")
+        st.subheader(f"Title: {news_item['title']}")
         st.write(f"Description: {news_item['description']}")
-        st.write(f"URL: {news_item['url']}")
+        st.link_button("Go to gallery", news_item['url'])
+        # st.write(f"URL: {news_item['url']}")
         st.image(news_item['image_url'], caption="Image", use_column_width=True)
         
         # Perform sentiment analysis
