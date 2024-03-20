@@ -37,7 +37,7 @@ if st.button("Login"):
         st.session_state["userDetails"] = user_details
         st.session_state["isUserLoggedIn"] = True
         st.markdown(f"<p style='color:green'>Welcome {username}!</p>", unsafe_allow_html=True)
-        st.switch_page("/pages/7_Portfolio.py")
+        st.switch_page("pages/7_Portfolio.py")
     else:
         st.markdown(f"<p style='color:red'>Invalid username or password</p>", unsafe_allow_html=True)
 
