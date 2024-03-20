@@ -10,7 +10,7 @@ def fetch_news(symbols):
     params = {
         "symbols": symbols,
         "filter_entities": True,
-        "api_token": "oL2OY9KxZ4Szlf7ktQVvD5pAHR72Km2dpAD932S1"
+        "api_token": "nZcgHIfB9Po7zq9w9VNbeREVXK1oAjJ98628Rhx9"
     }
     response = requests.get(url, params=params)
 
