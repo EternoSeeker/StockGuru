@@ -43,13 +43,13 @@ if news_data:
     for news_item in news_data:
         st.subheader(f"Title: {news_item['title']}")
         st.write(f"Description: {news_item['description']}")
-        st.link_button("Go to gallery", news_item['url'])
+        st.link_button("Visit Site", news_item['url'])
         # st.write(f"URL: {news_item['url']}")
         st.image(news_item['image_url'], caption="Image", use_column_width=True)
         
         # Perform sentiment analysis
         sentiment = analyze_sentiment(news_item['description'])
-        st.markdown(f"<span style='color:white; font-size:2rem;'>Sentiment: {sentiment}</span>", unsafe_allow_html=True)
+        st.markdown(f"<span style='color:white; font-size:1.7rem;'>Sentiment: {sentiment}</span>", unsafe_allow_html=True)
         st.write("---")
 else:
     st.write("No news data available.")
