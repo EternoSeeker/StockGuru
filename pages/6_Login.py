@@ -44,5 +44,5 @@ if st.button("Login"):
 # Add a link to the registration page
 st.markdown("Don't have an account? Register here.")
 if st.button("Register"):
-    st.switch_page("/pages/5_Register.py")
+    st.switch_page("pages/5_Register.py")
 

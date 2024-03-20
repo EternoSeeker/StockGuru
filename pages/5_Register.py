@@ -38,4 +38,4 @@ if st.button("Register"):
 
         result = users.insert_one(user_document)
         st.success(f"Registered successfully!")
-        st.switch_page("/pages/6_Login.py")
+        st.switch_page("pages/6_Login.py")
