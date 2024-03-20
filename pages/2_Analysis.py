@@ -35,7 +35,7 @@ time_series_interval = st.selectbox('Select Time Series Interval', ['Daily', 'We
 
 if st.button('Submit', key='submit_btn'):
     if time_series_interval == 'Daily':
-        url = f'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol_input}&apikey=DNT3T50QF2PQ4ZDZ'
+        url = f'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol_input}&apikey=NCS84UJYO8NB6UBS'
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
@@ -69,7 +69,7 @@ if st.button('Submit', key='submit_btn'):
             st.dataframe(df1)
 
     elif time_series_interval == 'Weekly':
-        url = f'https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol={symbol_input}&apikey=DNT3T50QF2PQ4ZDZ'
+        url = f'https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol={symbol_input}&apikey=NCS84UJYO8NB6UBS'
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
@@ -103,7 +103,7 @@ if st.button('Submit', key='submit_btn'):
             st.dataframe(df1)
 
     else:
-        url = f'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol={symbol_input}&apikey=DNT3T50QF2PQ4ZDZ'
+        url = f'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol={symbol_input}&apikey=NCS84UJYO8NB6UBS'
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
