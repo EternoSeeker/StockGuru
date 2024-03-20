@@ -89,8 +89,9 @@ if st.button("Save Preferences"):
 
     st.line_chart(chart_data)
 
-if st.button("Logout"):
-   st.session_state["isUserLoggedIn"] = False
-   st.session_state["userDetails"] = {}
-   st.markdown(f"<p style='color:white'>You have been logged out</p>", unsafe_allow_html=True)
-   st.switch_page("pages/6_Login.py")
+if st.session_state["isUserLoggedIn"]:
+    if st.button("Logout"):
+        st.session_state["isUserLoggedIn"] = False
+        st.session_state["userDetails"] = {}
+        st.markdown(f"<p style='color:white'>You have been logged out</p>", unsafe_allow_html=True)
+        st.switch_page("pages/6_Login.py")
