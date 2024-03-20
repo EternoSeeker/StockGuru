@@ -46,8 +46,11 @@ if prompt := st.chat_input("Message StockGuru..."):
     elif "next-answer" not in st.session_state:
         if ["userDetails"] in st.session_state:
             current_user_stocks = st.session_state["userDetails"]["preferences"]["CurrentStocks"]
+        else:
+            current_user_stocks = []
+        current_user_stocks_str = ', '.join(current_user_stocks)
         st.session_state["next-answer"] = prompt
-        user_message["content"] = f"{prompt} - These were my preferences, {current_user_stocks} are my current stock holdings in NASDAQ and NYSE. Suggest me a some good stock that might perform well from other domains for diversification. Also in subsequent prompts, Only answer my questions related to stocks and market."
+        user_message["content"] = f"{prompt} - These were my preferences, {current_user_stocks_str} are my current stock holdings in NASDAQ and NYSE. Suggest me a some good stock that might perform well from other domains for diversification. Also in subsequent prompts, Only answer my questions related to stocks and market."
 
     # Add the user's message to the list
     st.session_state.messages.append(user_message)
