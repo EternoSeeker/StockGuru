@@ -3,7 +3,7 @@ import streamlit as st
 import hashlib
 
 # Connect to your MongoDB instance
-client = MongoClient(st.secrets["connection_string"])
+client = MongoClient(st.secrets["CONNECTION_STRING"])
 db = client['stock_recommender']  # Replace 'your_database_name' with your actual database name
 users = db['users']
 

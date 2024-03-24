@@ -68,7 +68,7 @@ if st.button("Save Preferences"):
     chart_data = pd.DataFrame()  # Initialize an empty DataFrame
 
     for symbol_input in current_user_stocks:
-        url = f'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol_input}&apikey=NCS84UJYO8NB6UBS'
+        url = f'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol_input}&apikey={st.secrets["ALPHAVANTAGE_API_KEY"]}'
         response = requests.get(url)
 
         if response.status_code == 200:

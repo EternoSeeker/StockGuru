@@ -10,7 +10,7 @@ def fetch_news(symbols):
     params = {
         "symbols": symbols,
         "filter_entities": True,
-        "api_token": "nZcgHIfB9Po7zq9w9VNbeREVXK1oAjJ98628Rhx9"
+        "api_token": st.secrets["MARKETAUX_API_TOKEN"]
     }
     response = requests.get(url, params=params)
 

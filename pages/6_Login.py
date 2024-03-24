@@ -11,7 +11,7 @@ if st.session_state["isUserLoggedIn"] == False:
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
 
-client = MongoClient(st.secrets["connection_string"])
+client = MongoClient(st.secrets["CONNECTION_STRING"])
 db = client['stock_recommender']  # Replace 'your_database_name' with your actual database name
 users = db['users']
 
