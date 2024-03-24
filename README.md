@@ -32,6 +32,26 @@ pip install streamlit
 ```
 git clone https://github.com/EternoSeeker/Alphabyte.git
 ```
+```
+cd Alphabyte
+```
+
+- **In the project directory create a ".streamlit" directory**
+```
+mkdir .streamlit
+```
+
+- **Create a "secrets.toml" file inside the .streamlit directory**
+
+- **Put all your API keys there**
+
+- **secrets.toml**
+```
+ALPHAVANTAGE_API_KEY = "<api_key_here>"
+MARKETAUX_API_TOKEN = "<api_token_here>"
+OPENAI_API_KEY = "<api_key_here>"
+CONNECTION_STRING = "<connection_string_here>"
+```
 
 - **Run this command within the directory of project**:
 
